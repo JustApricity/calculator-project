@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator Project</title>
+</head>
+<body>
+<h1>Area of a Square Calculator</h1>
+<div class="container">
+    <div class="content">
+        <form>
+        <div class="row">
+            <div>
+                <label for="width">Width</label>
+            <input id="width" name="width" type="text">
+            </div>
+            <div>
+                <label for="height">Height</label>
+            <input id="height" name="height" type="text">
+            </div>
+        </div>
+        </form>
+        <button type="button" id="calculate">Calculate</button>
+        <p id="answer"></p>
+    </div>
+</div>
+<script>
+    const buttonElement = document.getElementById("calculate")
+    const width = document.getElementById("width")
+    const height = document.getElementById("height")
+    const answer = document.getElementById("answer")
+    console.log(buttonElement)
+    buttonElement.addEventListener('click', function(e){
+    let result = width.value*height.value;
+    answer.textContent = `Your area is ${result}`
+    })
+</script>
+
+</body>
+</html>
